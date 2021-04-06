@@ -15,6 +15,7 @@ bot.on('ready', async => {
 bot.on('message', async message => {
     if(message.author.bot) return;
     if(message.channel.type === "dm") return;
+    if(message.content === "T'es sympa"){ message.reply('Cool ta vie. :sweat_smile:'); message.react('👌')};
     if(!message.content.startsWith(prefix)) return;
 
 
