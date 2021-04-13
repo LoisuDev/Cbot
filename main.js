@@ -7,7 +7,7 @@ const superagent = require('superagent');
 bot.login(process.env.BOT_TOKEN);
 
 bot.on('ready', async => {
-    bot.user.setActivity("Cédric le plus bg | %help", {type : "WATCHING"})
+    bot.user.setActivity("New %osuskin | %help", {type : "WATCHING"})
         .then(console.log(`${bot.user.username} est en ligne`))
         .catch(console.error());
 });
@@ -188,5 +188,13 @@ bot.on('message', async message => {
         .setTitle(`${message.author.username} donne une fessée à ${membre}`)
         .setImage(body.url)
         message.channel.send(spank_embed);
+    }
+    
+    if(command === "osuskin") {
+        message.channel.send("**Azusa Nakano vient de délivrer un nouveau skin**");
+        message.channel.send("https://drive.google.com/file/d/1Gox8fYuZgc1cvbkT-4t1Adg3AS7IrCOK/view?usp=sharing");
+        message.channel.send("https://cdn.discordapp.com/attachments/768482870489645097/831668969085206558/screenshot317.jpg");
+        message.channel.send("https://cdn.discordapp.com/attachments/768482870489645097/831668973941817375/screenshot318.jpg");
+        message.channel.send("https://cdn.discordapp.com/attachments/768482870489645097/831668969064235059/screenshot321.jpg");
     }
 });
