@@ -16,6 +16,13 @@ bot.on('message', async message => {
     if(message.author.bot) return;
     if(message.channel.type === "dm") return;
     if(message.content === "T'es sympa"){ message.reply('Cool ta vie. :sweat_smile:'); message.react('👌')};
+    if(message.content === "Je te baise" || message.content === "je te baise" || message.content === "jte baise" || message.content === "jte bz") {
+        let { body } = await superagent.get(`https://nekos.life/api/lewd`);
+        message.react('😳')
+        message.reply("Non mais ça va pas, Senpai ?! Comment tu peux dire un truc aussi embarassant ?! >.<")
+        message.author.send("En fait, je suis d'accord pour faire ça avec toi, mais ne le dis pas aux autres stp >.<")
+        message.author.send(body.url);
+    }
     if(!message.content.startsWith(prefix)) return;
 
 
