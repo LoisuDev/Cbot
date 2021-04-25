@@ -2,6 +2,7 @@ const Discord = require('discord.js');
 
 module.exports = {
   name: "8ball",
+  aliases: ['8b'],
   description: "8ball !",
   execute(message, args) {
         if (!args[1]) return message.reply("Entrez une question !")
