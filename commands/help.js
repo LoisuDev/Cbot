@@ -7,7 +7,7 @@ module.exports = {
   
   execute(message, args) {
     const data = [];
-    const { commands } = message.bot;
+    const { commands } = message.client;
     
     if(!args.length) {
       data.push('Voici une liste de toutes mes commandes :\n');
