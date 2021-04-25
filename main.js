@@ -30,10 +30,9 @@ bot.on('message', async message => {
 
     const args = message.content.slice(prefix.length).trim().split(/ +/);
     const commandName = args.shift().toLowerCase();
-
-    if (!bot.commands.has(commandName)) return;
-    
-    const command = bot.commands.get(commandName);	
+    const command = bot.commands.get(commandName)
+    	|| bot.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
+    if (!command) return;
 	
 	try {
 	command.execute(message, args);
