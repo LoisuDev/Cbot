@@ -4,18 +4,20 @@ module.exports = {
   name: "presentation",
   description: "Présentation !",
   execute(message, args) {
-        let prénom = args[0];
-        let âge = args[1];
-        let genre = args[2];
-        let orientation = args[3];
-        let anniversaire = args[4];
-        let situation = args[5];
+        let blbl = args.join(' ').split('%')
+        let prénom = blbl[0];
+        let âge = blbl[1];
+        let genre = blbl[2];
+        let orientation = blbl[3];
+        let anniversaire = blbl[4];
+        let situation = blbl[5];
         let usericon = message.author.displayAvatarURL();
     
-        if(!args[0] || !args[1] || !args[2] || !args[3] || !args[4] || !args[5] || args[0] == "help") {
-            message.channel.send("Voici comment fonctionne la commande 'présentation' : ``<prefix>presentation prénom âge genre orientation_sexuelle date_anniversaire situation_amoureuse``");
-            return message.channel.send("*Pour les arguments qui font plusieurs mots, comme la situation amoureuse ou le genre, Veuillez utiliser le tiret du 8 : '_'. Pour la date d'anniversaire, rentrez la sous ce format : ``JJ/MM/AAAA``.");
-        }
+         if(!blbl[0] || !blbl[1] || !blbl[2] || !blbl[3] || !blbl[4] || !blbl[5] || blbl[0] == "help") {
+            return message.channel.send("Voici comment fonctionne la commande 'présentation' : ``%presentation prénom%âge%genre%orientation sexuelle%date d'anniversaire%situation amoureuse``");
+         } 
+    
+    
         let presentation_embed = new Discord.MessageEmbed()
             .setColor('e410d3')
             .setAuthor(message.author.username)
