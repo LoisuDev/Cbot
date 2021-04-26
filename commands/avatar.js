@@ -7,7 +7,7 @@ module.exports = {
   
   async execute(bot, message, args) {
     let member = message.mentions.members.first();
-    if(!member) let member = message.author;
+    if(!member) member = message.author;
     let avatar = member.displayAvatarURL({size: 1024});
     
     let embed = new Discord.MessageEmbed()
