@@ -6,8 +6,9 @@ module.exports = {
   
   async execute(message, args) {
     if(!args.length) return message.channel.send('Veuillez préciser le joueur que vous souhaitez voir ! La liste des joueurs disponible se trouve avec %osu list');
-    if(args === 'list') return message.channel.send('Liste des joueurs disponibles :\n- Azuuusa\n-Nanamiiiiiiiii');
-    if(args === 'Azuuusa') return message.channel.send('**Azuuuusa**\n**Type de jeu** : osu!Relax\n**Niveau moyen de jeu (en étoiles)** : 4~6,5');
-    if(args === 'Nanamiiiiiiiii') return message.channel.send('**Nanamiiiiiiiii**\n**Type de jeu** : osu!AutoPilot\n**Niveau moyen de jeu (en étoiles)** : 1~3');
+    let nom = args.join(' ');
+    if(nom === 'list') return message.channel.send('Liste des joueurs disponibles :\n- Azuuusa\n-Nanamiiiiiiiii');
+    if(nom === 'Azuuusa') return message.channel.send('**Azuuuusa**\n**Type de jeu** : osu!Relax\n**Niveau moyen de jeu (en étoiles)** : 4~6,5');
+    if(nom === 'Nanamiiiiiiiii') return message.channel.send('**Nanamiiiiiiiii**\n**Type de jeu** : osu!AutoPilot\n**Niveau moyen de jeu (en étoiles)** : 1~3');
   }
 }
