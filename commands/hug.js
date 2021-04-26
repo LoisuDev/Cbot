@@ -6,7 +6,7 @@ module.exports = {
   aliases: ['câlin', 'calin'],
   description: 'Faites un câlin à quelqu\'un ou alors juste envoyez un gif de câlin dans le chat !',
   
-  execute async (message, args) => {
+  async execute(message, args) {
     let member = message.mentions.members.first();
     let { body } = await superagent.get(`https://nekos.life/api/hug`);
     if(!member) return message.channel.send(body.url);
