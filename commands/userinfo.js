@@ -15,8 +15,7 @@ module.exports = {
       .setTitle(`${member.tag} : Qui suis-je ?`)
       .setThumbnail(avatar)
       .setDescription(`Client ID : ${member.id}`)
-      .addField('**Compte crée le**', member.createdTimestamp)
-      .addField('**Statut**', member.presence)
+      .addField('**Compte crée le**', member.createdAt)
     
     message.channel.send(embed)
   }
