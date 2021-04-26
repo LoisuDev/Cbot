@@ -11,7 +11,7 @@ module.exports = {
     let { body } = await superagent.get(`https://nekos.life/api/hug`);
     if(!member) return message.channel.send(body.url);
     
-    let hug_embed = new Discord.MessageEmbed();
+    let hug_embed = new Discord.MessageEmbed()
       .setColor('e410d3')
       .setTitle(`${message.author.username} fait un câlin à ${member.displayName}`)
       .setImage(body.url)
