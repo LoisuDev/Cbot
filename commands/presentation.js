@@ -3,6 +3,7 @@ const Discord = require('discord.js');
 module.exports = {
   name: "presentation",
   description: "Présentation !",
+  usage: 'Tapez %presentation help pour connaître le fonctionnement de la commande',
   execute(message, args) {
         let blbl = args.join(' ').split('%')
         let prénom = blbl[0];
