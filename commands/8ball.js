@@ -4,6 +4,7 @@ module.exports = {
   name: "8ball",
   aliases: ['8b'],
   description: "8ball !",
+  usage: '%8ball <question>',
   execute(message, args) {
         if (!args[1]) return message.reply("Entrez une question !")
 
