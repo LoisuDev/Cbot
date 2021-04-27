@@ -4,6 +4,7 @@ module.exports = {
   name: "help",
   aliases: ['aide'],
   description: "Une liste des commandes disponibles !",
+  usage: '%help (<commande>)',
   
   execute(message, args) {
     const data = [];
