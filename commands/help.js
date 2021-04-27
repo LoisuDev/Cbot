@@ -29,7 +29,8 @@ module.exports = {
 
     if (command.aliases) data.push(`**Aliases:** ${command.aliases.join(', ')}`);
     if (command.description) data.push(`**Description:** ${command.description}`);
-    if (command.usage) data.push(`**Utilisation**: ${command.usage}`)
+    if (command.usage) data.push(`**Utilisation:** ${command.usage}`);
+    if (command.permissions) data.push(`**Permissions requises:** ${command.permissions.join(', ')}`);
     
     message.channel.send(data, { split: true });
     
