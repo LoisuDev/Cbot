@@ -3,6 +3,7 @@ const Discord = require('discord.js');
 module.exports = {
   name: 'osu',
   description: 'Le profil de joueurs osu du serveur ! (Contactez la fonda pour y apparaître)',
+  usage: '%osu (list) <nom du joueur>',
   
   async execute(message, args) {
     if(!args.length) return message.channel.send('Veuillez préciser le joueur que vous souhaitez voir ! La liste des joueurs disponible se trouve avec %osu list');
