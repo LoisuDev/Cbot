@@ -4,7 +4,7 @@ module.exports = {
   name: 'character',
   aliases: ['perso', 'personnage'],
   description: 'Fournit une image ainsi que des informations de base sur le personnage.\n``%character list`` vous donnera la liste des personnages disponibles.\nPour avoir votre personnage dans la liste, contactez l\'équipe de développement.',
-  
+  usage: '%character (list) <nom du personnage recherché>',
   async execute(message, args) {
     let nom = args.join(' ');
     if(!nom) nom = 'list';
