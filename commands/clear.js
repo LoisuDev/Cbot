@@ -3,6 +3,7 @@ const Discord = require('discord.js');
 module.exports = {
   name: "clear",
   description: "clear !",
+  usage: '%clear <nombre de messages à supprimer>',
   execute(message, args) {
         if (!message.member.hasPermission("MANAGE_MESSAGES")) 
         return message.channel.send("Senpai, vous n'avez pas le droit de faire ça >.< ♥")
