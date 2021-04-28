@@ -8,7 +8,7 @@ const superagent = require('superagent');
 bot.login(process.env.BOT_TOKEN);
 
 bot.on('ready', async => {
-    bot.user.setActivity("New %osuskin | %help", {type : "WATCHING"})
+    bot.user.setActivity("v1.3 bang bang || %help", {type : "WATCHING"})
         .then(console.log(`${bot.user.username} est en ligne`))
         .catch(console.error());
 });
