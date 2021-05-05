@@ -7,8 +7,8 @@ module.exports = {
   description: 'Chatouillez quelqu\'un ou alors juste envoyez un gif de ça dans le chat !',
   
   async execute(message, args) {
-    if(message.author.id === "573426170289455154") return message.channel.send(`C'est dommage, ${message.author.tag}... Pour une raison inconnue, tu ne peux pas faire ça...`)
     let member = message.mentions.members.first();
+    if(message.author.id === "573426170289455154" && member.id === "655605141046820884") return message.channel.send(`C'est dommage, ${message.author.tag}... Pour une raison inconnue, tu ne peux pas faire ça...`)
     let { body } = await superagent.get(`https://shiro.gg/api/images/tickle`);
     if(!member) return message.channel.send(body.url);
     
