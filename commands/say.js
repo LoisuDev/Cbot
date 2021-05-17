@@ -7,7 +7,8 @@ module.exports = {
   usage: '%say <ce que vous voulez me faire dire>',
   
   async execute(message, args) {
-    message.channel.send(args.length);
+    let msg = args.join(' ');
+    message.channel.send(msg);
     message.delete();
   }
 }
