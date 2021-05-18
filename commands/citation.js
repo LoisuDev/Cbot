@@ -2,6 +2,7 @@ const Discord = require('discord.js');
 
 module.exports = {
   name: 'citation',
+  aliases: ['quote'],
   description: 'Une citation de la part de l\'équipe de bras cassés que nous sommes.',
   usage: '%citation',
   
