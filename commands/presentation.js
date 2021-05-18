@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 
 module.exports = {
   name: "presentation",
-  description: "Présentation !",
+  description: "Présentez-vous de manière propre.",
   usage: 'Tapez %presentation help pour connaître le fonctionnement de la commande',
   execute(message, args) {
         let blbl = args.join(' ').split('%')
