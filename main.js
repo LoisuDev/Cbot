@@ -8,7 +8,7 @@ const superagent = require('superagent');
 bot.login(process.env.BOT_TOKEN);
 
 bot.on('ready', async => {
-    bot.user.setActivity("v1.2.2 bang bang || %help", {type : "WATCHING"})
+    bot.user.setActivity("%help", {type : "WATCHING"})
         .then(console.log(`${bot.user.username} est en ligne`))
         .catch(console.error());
 });
@@ -24,8 +24,6 @@ for (const file of commandFiles) {
 bot.on('message', async message => {
     if(message.author.bot) return;
     if(message.channel.type === "dm") return;
-    if(message.content.includes("owo")) message.reply('What\'s this?')
-    if(message.content === "T'es sympa"){ message.reply('Cool ta vie. :sweat_smile:'); message.react('👌')};
     if(!message.content.startsWith(prefix)) return;
 
 
