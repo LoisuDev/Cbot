@@ -14,7 +14,7 @@ module.exports = {
     
     let hug_embed = new Discord.MessageEmbed()
       .setColor('e410d3')
-      .setTitle(`${message.author.username} donne un petit coup à ${member.displayName}`)
+      .setTitle(`${message.author.username} pokes ${member.displayName}`)
       .setImage(body.url)
       .setFooter('poke')
       .setTimestamp()
