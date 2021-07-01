@@ -3,7 +3,7 @@ const superagent = require('superagent');
 
 module.exports = {
   name: 'shrug',
-  description: 'Vous vous en fout*z, ou alors vous savez pas !',
+  
   
   async execute(message, args) {
     let member = message.mentions.members.first();
