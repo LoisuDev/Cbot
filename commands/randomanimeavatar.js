@@ -4,13 +4,13 @@ const superagent = require('superagent');
 module.exports = {
   name: 'randomanimeavatar',
   aliases: ['animeavatar', 'raa'],
-  description: 'Vous êtes en panne d\'inspi pour votre avatar ? C\'est cadeau !',
+  description: 'returns a random anime avatar',
   
   async execute(message, args) {
     let { body } = await superagent.get(`https://nekos.life/api/v2/img/avatar`)
     
     let embed = new Discord.MessageEmbed()
-      .setTitle('Senpai, voici un avatar !')
+      .setTitle('Senpai, here\'s an avatar !')
       .setImage(body.url)
       .setFooter('random anime avatar')
       .setTimestamp()
