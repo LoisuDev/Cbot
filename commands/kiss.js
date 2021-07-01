@@ -4,7 +4,6 @@ const superagent = require('superagent');
 module.exports = {
   name: 'kiss',
   aliases: ['bisou'],
-  description: 'Faites un bisou à quelqu\'un ou alors juste envoyez un gif de bisou dans le chat !',
   
   async execute(message, args) {
     let member = message.mentions.members.first();
@@ -13,7 +12,7 @@ module.exports = {
     
     let hug_embed = new Discord.MessageEmbed()
       .setColor('e410d3')
-      .setTitle(`${message.author.username} fait un bisou à ${member.displayName}`)
+      .setTitle(`${message.author.username} kisses ${member.displayName}`)
       .setImage(body.url)
       .setFooter('kiss')
       .setTimestamp()
