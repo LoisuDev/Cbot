@@ -5,8 +5,7 @@ const superagent = require('superagent');
 module.exports = {
   name: 'pout',
   aliases: ['bouder'],
-  description: 'Boudez à quelqu\'un ou alors juste envoyez un gif de quelqu\'un qui boude dans le chat !',
-  
+    
   async execute(message, args) {
     let member = message.mentions.members.first();
     let { body } = await superagent.get(`https://shiro.gg/api/images/pout`);
@@ -14,7 +13,7 @@ module.exports = {
     
     let hug_embed = new Discord.MessageEmbed()
       .setColor('e410d3')
-      .setTitle(`${message.author.username} boude à ${member.displayName}`)
+      .setTitle(`${message.author.username} is mad at ${member.displayName}`)
       .setImage(body.url)
       .setFooter('pout')
       .setTimestamp()
