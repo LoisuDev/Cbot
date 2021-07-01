@@ -4,7 +4,6 @@ const superagent = require('superagent');
 module.exports = {
   name: 'tickle',
   aliases: ['chatouiller'],
-  description: 'Chatouillez quelqu\'un ou alors juste envoyez un gif de ça dans le chat !',
   
   async execute(message, args) {
     let member = message.mentions.members.first();
@@ -14,7 +13,7 @@ module.exports = {
     
     let hug_embed = new Discord.MessageEmbed()
       .setColor('e410d3')
-      .setTitle(`${message.author.username} chatouille ${member.displayName}`)
+      .setTitle(`${message.author.username} tickles ${member.displayName}`)
       .setImage(body.url)
       .setFooter('tickle')
       .setTimestamp()
