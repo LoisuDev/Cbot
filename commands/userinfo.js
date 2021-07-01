@@ -3,8 +3,8 @@ const Discord = require('discord.js');
 module.exports = {
   name: 'userinfo',
   aliases : ['ui', 'whois'],
-  description: 'Informations sur l\'utilisateur mentionné ou vous-même.',
-  usage: '%userinfo (<@utilisateur>)',
+  description: 'Informations about you or the user you mentionned.',
+  usage: '%userinfo (<@user>)',
   
   async execute(message, args) {
     let member = message.mentions.users.first();
@@ -13,10 +13,10 @@ module.exports = {
     let avatar = member.displayAvatarURL();
     
     let embed = new Discord.MessageEmbed()
-      .setTitle(`${member.tag} : Qui suis-je ?`)
+      .setTitle(`${member.tag} : Who am I?`)
       .setThumbnail(avatar)
       .setDescription(`Client ID : ${member.id}`)
-      .addField('**Compte crée le**', member.createdAt)
+      .addField('**Account created at:**', member.createdAt)
     
     message.channel.send(embed)
   }
