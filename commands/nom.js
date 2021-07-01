@@ -4,7 +4,7 @@ const superagent = require('superagent');
 module.exports = {
   name: 'nom',
   aliases: ['manger'],
-  description: 'I can tell, you\'re hungry, don\'t you?',
+  description: 'I can tell you\'re hungry, don\'t you?',
   
   async execute(message, args) {
     let { body } = await superagent.get(`https://shiro.gg/api/images/nom`);
