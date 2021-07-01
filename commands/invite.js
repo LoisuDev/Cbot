@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 
 module.exports = {
   name: 'invite',
-  description: 'Returns a link to invite CabaneBot in your server.',
+  description: 'Returns a link to invite Sotoka in your server.',
   usage: '%invite',
   
   async execute (message, args) {
