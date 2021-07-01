@@ -3,7 +3,7 @@ const Discord = require('discord.js');
 module.exports = {
   name: 'avatar',
   aliases: ['icon', 'pfp', 'pp'],
-  description: 'Montre ton avatar ou celui de la personne que tu as mentionnée.',
+  description: 'Returns your avatar or the user you mentionned\'s one.',
   
   async execute(message, args) {
     let member = message.mentions.users.first();
@@ -11,7 +11,7 @@ module.exports = {
     let avatar = member.displayAvatarURL({size: 1024});
     
     let embed = new Discord.MessageEmbed()
-      .setTitle(`Avatar de : ${member.username}`)
+      .setTitle(`${member.username}'s Avatar:`)
       .setImage(avatar)
       .setFooter('avatar')
       .setTimestamp()
