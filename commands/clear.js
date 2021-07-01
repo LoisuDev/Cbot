@@ -2,8 +2,8 @@ const Discord = require('discord.js');
 
 module.exports = {
   name: "clear",
-  description: "Clears the number of messages you provided.",
-  usage: '%clear <number of messages to delete>',
+  description: "Clears the amount of messages you provided.",
+  usage: '%clear <amount of messages to delete>',
   permissions: ['Manage Messages'],
   execute(message, args) {
         if (!message.member.hasPermission("MANAGE_MESSAGES")) 
