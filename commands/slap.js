@@ -4,7 +4,7 @@ const superagent = require('superagent');
 module.exports = {
   name: 'slap',
   aliases: ['taper'],
-  description: 'Tapez quelqu\'un ou alors juste envoyez un gif de quelqu\'un qui tape dans le salon !',
+  description: 'Meanie!',
   
   async execute(message, args) {
     let member = message.mentions.members.first();
@@ -13,7 +13,7 @@ module.exports = {
     
     let hug_embed = new Discord.MessageEmbed()
       .setColor('e410d3')
-      .setTitle(`${message.author.username} tape ${member.displayName}`)
+      .setTitle(`${message.author.username} slaps ${member.displayName}`)
       .setImage(body.url)
       .setFooter('slap')
       .setTimestamp()
