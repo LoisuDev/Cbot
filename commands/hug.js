@@ -4,7 +4,7 @@ const superagent = require('superagent');
 module.exports = {
   name: 'hug',
   aliases: ['câlin', 'calin'],
-  description: 'Faites un câlin à quelqu\'un ou alors juste envoyez un gif de câlin dans le chat !',
+  description: 'returns a hug pic/gif.',
   
   async execute(message, args) {
     let member = message.mentions.members.first();
@@ -13,7 +13,7 @@ module.exports = {
     
     let hug_embed = new Discord.MessageEmbed()
       .setColor('e410d3')
-      .setTitle(`${message.author.username} fait un câlin à ${member.displayName}`)
+      .setTitle(`${message.author.username} hugs ${member.displayName}`)
       .setImage(body.url)
       .setFooter('hug')
       .setTimestamp()
