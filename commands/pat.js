@@ -4,7 +4,7 @@ const superagent = require('superagent');
 
 module.exports = {
   name: 'pat',
-  description: 'Wait, is this legal ?',
+  description: 'Wait, is this legal?',
   
   async execute(message, args) {
     let member = message.mentions.members.first();
@@ -13,7 +13,7 @@ module.exports = {
     
     let hug_embed = new Discord.MessageEmbed()
       .setColor('e410d3')
-      .setTitle(`${message.author.username} tapote le front de ${member.displayName}`)
+      .setTitle(`${message.author.username} pats ${member.displayName}`)
       .setImage(body.url)
       .setFooter('pat')
       .setTimestamp()
