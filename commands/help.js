@@ -3,17 +3,17 @@ const Discord = require('discord.js');
 module.exports = {
   name: "help",
   aliases: ['aide'],
-  description: "Une liste des commandes disponibles !",
-  usage: '%help (<commande>)',
+  description: "A list of my commands!",
+  usage: '%help (<command>)',
   
   execute(message, args) {
     const data = [];
     const { commands } = message.client;
     
     if(!args.length) {
-      data.push('Voici une liste de toutes mes commandes :\n');
+      data.push('Here is a list of my commands :\n');
       data.push(commands.map(command => command.name).join(', '));
-      data.push('\nVous pouvez taper %help <Nom de la commande> pour obtenir plus d\'informations sur une commande !')
+      data.push('\nYou can type %help <command> to get more infos for a specific command!')
       
       return message.channel.send(data, { split: true })
     };
@@ -30,8 +30,8 @@ module.exports = {
 
     if (command.aliases) data.push(`**Aliases:** ${command.aliases.join(', ')}`);
     if (command.description) data.push(`**Description:** ${command.description}`);
-    if (command.usage) data.push(`**Utilisation:** ${command.usage}`);
-    if (command.permissions) data.push(`**Permissions requises:** ${command.permissions.join(', ')}`);
+    if (command.usage) data.push(`**Usage:** ${command.usage}`);
+    if (command.permissions) data.push(`**Permissions required:** ${command.permissions.join(', ')}`);
     
     message.channel.send(data, { split: true });
     
