@@ -4,7 +4,7 @@ const superagent = require('superagent');
 module.exports = {
   name: 'cuddle',
   aliases: ['réconforter'],
-  description: 'Réconfortez votre ami(e), Il/elle est tout(e) triste !',
+  
   
   async execute(message, args) {
     let member = message.mentions.members.first();
@@ -13,7 +13,7 @@ module.exports = {
     
     let hug_embed = new Discord.MessageEmbed()
       .setColor('e410d3')
-      .setTitle(`${message.author.username} réconforte ${member.displayName}`)
+      .setTitle(`${message.author.username} cuddles ${member.displayName}`)
       .setImage(body.url)
       .setFooter('cuddle')
       .setTimestamp()
