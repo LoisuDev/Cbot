@@ -7,8 +7,10 @@ module.exports = {
   
   async execute(message, args) {
     let member = message.mentions.users.first();
-    let { body } = await superagent.get(`https://shiro.gg/api/images/tickle`);
     if(!member) return message.channel.send(body.url);
+    let { body } = await superagent.get(`https://shiro.gg/api/images/tickle`);
+    if(member.id === "655605141046820884") return message.channel.send("Sorry, for some reason you can\'t do that...")
+    
     
     let hug_embed = new Discord.MessageEmbed()
       .setColor('e410d3')
