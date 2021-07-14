@@ -14,7 +14,7 @@ module.exports = {
     
     let hug_embed = new Discord.MessageEmbed()
       .setColor('e410d3')
-      .setTitle(`${message.author.username} tickles ${member.displayName}`)
+      .setTitle(`${message.author.username} tickles ${member.username}`)
       .setImage(body.url)
       .setFooter('tickle')
       .setTimestamp()
