@@ -8,14 +8,9 @@ module.exports = {
   usage: "%cat",
   
   async execute (message, args) {
-    let [{ body }] = await superagent.get(`https://api.thecatapi.com/v1/images/search`)
+    let { body } = await superagent.get(`https://aws.random.cat/meow`)
     
-    let embed = new Discord.MessageEmbed()
-      .setColor('e410d3')
-      .setTitle('Meow!')
-      .setImage(`https://cdn2.thecatapi.com/images/${body.id}`)
-      .setFooter("cat")
-      .setTimestamp()
-    return message.channel.send(embed);
+    message.channel.send('Meow!')
+    return message.channel.send(body.file);
   }
 }
