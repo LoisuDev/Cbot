@@ -10,7 +10,12 @@ module.exports = {
   async execute (message, args) {
     let { body } = await superagent.get(`https://aws.random.cat/meow`)
     
-    message.channel.send('Meow!')
-    return message.channel.send(body.file);
+    let embed = new Discord.MessageEmbed()
+      .setColor('e410d3')
+      .setTitle('Meow!')
+      .setImage(body.file)
+      .setFooter('cat')
+      .setTimestamp()
+    return message.channel.send(embed);
   }
 }
