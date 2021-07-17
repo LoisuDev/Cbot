@@ -8,7 +8,7 @@ module.exports = {
   usage: "%cat",
   
   async execute (message, args) {
-    let { body } = await superagent.get(`https://cdn2.thecatapi.com/images/c_cgMgQrq.jpg`)
+    let { body } = await superagent.get(`https://api.thecatapi.com/v1/images/search`)
     
     let embed = new Discord.MessageEmbed()
       .setColor('e410d3')
