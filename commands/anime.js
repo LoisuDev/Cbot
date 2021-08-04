@@ -29,6 +29,6 @@ module.exports = {
      return message.channel.send(embed)
     }
     
-    return message.channel.send('This anime doesn\'t exists or is not on the list! Please type %anime list to see the list.')
+    return message.channel.send('This anime doesn\'t exist or is not on the list! Please type %anime list to see the list.')
   }
 }
