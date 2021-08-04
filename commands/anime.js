@@ -8,7 +8,7 @@ module.exports = {
   
   async execute(message, args) {
     let anime = args.join(" ");
-    if(args.length) {return message.channel.send('Invalid arguments provided. ERR 01\n**Please provide an anime name! Type %anime list if you don\'t know what to search!**')}
+    if(!args.length) {return message.channel.send('Invalid arguments provided. ERR 01\n**Please provide an anime name! Type %anime list if you don\'t know what to search!**')}
     
     if(anime === "list") {
       return message.channel.send('**Here is the list of the animes available:\n- K-On! \n\nIf you wanna request an anime, please contact Sotoka-Chan#1111 on Discord!')
