@@ -6,6 +6,10 @@ module.exports = {
   usage: '%koncord',
   
   async execute(message, args) {
-    message.channel.send('Here\'s the link of the K-On Discord server ❤️ :\nhttps://discord.gg/kon')
+    let button = new disbut.MessageButton()
+      .setStyle('url')
+      .setLabel('K-On! Discord Server')
+      .setURL('https://discord.gg/kon')
+    message.channel.send('Here\'s the link of the K-On Discord server ❤️ :', button)
   }
 }
