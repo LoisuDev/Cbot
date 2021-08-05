@@ -4,6 +4,8 @@ bot.commands = new Discord.Collection();
 const prefix = process.env.PREFIX;
 const fs = require('fs');
 const superagent = require('superagent');
+const disbut = require('discord-buttons');
+disbut(bot);
 
 bot.login(process.env.BOT_TOKEN);
 
