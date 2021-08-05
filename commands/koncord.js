@@ -1,4 +1,5 @@
 const Discord = require('discord.js');
+const disbut = require('discord-buttons');
 
 module.exports = {
   name: 'koncord',
