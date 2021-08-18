@@ -24,7 +24,9 @@ module.exports = {
         'https://cdn.discordapp.com/attachments/869655101726400552/877596525491007529/ezgif.com-gif-maker.png'
       ]
       let res = Math.floor((Math.random() * hugs.length));
+      if(!member) return message.channel.send(hugs[res]);
       if(!args.length) return message.channel.send(hugs[res]);
+      
       let embed = new Discord.MessageEmbed()
         .setColor('e410d3')
         .setTitle(`${message.author.username} hugs ${member.username}`)
