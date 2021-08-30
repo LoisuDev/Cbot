@@ -6,7 +6,7 @@ module.exports = {
   description: 'Gives informations about the bot.',
   usage: '%info',
   
-  async execute (message, args) {
+  async execute (bot, message, args) {
     return message.channel.send('That command is a WIP. Please try again later!');
   }
 }
