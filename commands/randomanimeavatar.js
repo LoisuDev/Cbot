@@ -6,7 +6,7 @@ module.exports = {
   aliases: ['animeavatar', 'raa'],
   description: 'returns a random anime avatar',
   
-  async execute(message, args) {
+  async execute(bot, message, args) {
     let { body } = await superagent.get(`https://nekos.life/api/v2/img/avatar`)
     
     let embed = new Discord.MessageEmbed()
