@@ -5,7 +5,7 @@ module.exports = {
   name: 'blush',
   aliases: ['rougir'],
   
-  async execute(message, args) {
+  async execute(bot, message, args) {
     let member = message.mentions.members.first();
     let { body } = await superagent.get(`https://shiro.gg/api/images/blush`);
     if(!member) return message.channel.send(body.url);
