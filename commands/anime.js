@@ -6,7 +6,7 @@ module.exports = {
   description: 'Get informations about an anime. Type %anime list to see the list of the animes available.',
   usage: '%anime <anime you want to look at> \n%anime list',
   
-  async execute(message, args) {
+  async execute(bot, message, args) {
     let anime = args.join(" ");
     if(!args.length) {return message.channel.send('Invalid arguments provided. ERR 01\n**Please provide an anime name! Type %anime list if you don\'t know what to search!**')}
     
