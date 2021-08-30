@@ -6,7 +6,7 @@ module.exports = {
   description: 'Informations about you or the user you mentionned.',
   usage: '%userinfo (<@user>)',
   
-  async execute(message, args) {
+  async execute(bot, message, args) {
     let member = message.mentions.users.first();
     if(!member) member = message.author;
     
