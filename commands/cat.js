@@ -7,7 +7,7 @@ module.exports = {
   description: "returns a cat pic/gif.",
   usage: "%cat",
   
-  async execute (message, args) {
+  async execute (bot, message, args) {
     let { body } = await superagent.get(`https://aws.random.cat/meow`)
     
     let embed = new Discord.MessageEmbed()
