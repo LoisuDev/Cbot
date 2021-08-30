@@ -6,7 +6,7 @@ module.exports = {
   description: "A list of my commands!",
   usage: '%help (<command>)',
   
-  execute(message, args) {
+  execute(bot, message, args) {
     const data = [];
     const { commands } = message.client;
     
