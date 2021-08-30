@@ -5,7 +5,7 @@ module.exports = {
   description: 'returns a K-On hug picture/gif',
   usage: '%hug-kon [@username]\n Ping is optional.',
 
-  async execute (message, args) {
+  async execute (bot, message, args) {
       let member = message.mentions.users.first();
       let hugs = [
         'https://c.tenor.com/Gzc7utpMDZQAAAAC/anime-hug.gif',
