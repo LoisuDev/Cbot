@@ -4,7 +4,7 @@ module.exports = {
   name: "soup",
   description: "returns a soup pic.",
   usage: '%soup',
-  execute(message, args) {
+  execute(bot, message, args) {
        
     let replies = ["https://img.buzzfeed.com/video-api-prod/assets/f4a9b7128a684ee685fcbd2774c1cac9/BFV8580_Classic_Chicken_Noodle_Soup-THUMBNAIL.jpg?output-format=auto&output-quality=auto", 
                    "https://www.goodfood.com.au/content/dam/images/h/0/z/w/k/6/image.related.socialLead.620x349.3asfo.png/1583723912599.jpg",
