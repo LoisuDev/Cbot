@@ -24,11 +24,11 @@ module.exports = {
       .setTitle('Support Request')
       .setAuthor(message.author.tag)
       .setDescription('That person asked for help')
-      .addField('Channel', message.channel.name)
+      .addField('Channel', `<#${message.channel.id}>`)
       .addField('Date', message.createdAt)
       .addField('reason', reason)
       .setFooter('support')
-      .setThumbnail(message.author.avatarURL)
+      .setThumbnail(message.author.displayAvatarURL)
       .setTimestamp()
     
     await message.delete();
