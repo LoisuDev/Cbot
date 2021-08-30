@@ -5,7 +5,7 @@ module.exports = {
   description: "Clears the amount of messages you provided.",
   usage: '%clear <amount of messages to delete>',
   permissions: ['Manage Messages'],
-  execute(message, args) {
+  execute(bot, message, args) {
         if (!message.member.hasPermission("MANAGE_MESSAGES")) 
         return message.channel.send("Senpai, you can't do that! >.< ♥")
         if (!args[0])
