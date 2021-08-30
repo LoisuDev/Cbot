@@ -6,7 +6,7 @@ module.exports = {
   description: 'MOD POWER',
   
   
-  async execute (message, args) {
+  async execute (bot, message, args) {
     
     let button = new disbut.MessageButton()
       .setStyle('url')
