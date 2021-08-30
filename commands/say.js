@@ -4,7 +4,7 @@ module.exports = {
   name: 'say',
   aliases: ['dis'],
   
-  async execute(message, args) {
+  async execute(bot, message, args) {
     let msg = args.join(' ');
     message.channel.send(msg);
     message.delete();
