@@ -10,7 +10,7 @@ disbut(bot);
 bot.login(process.env.BOT_TOKEN);
 
 bot.on('ready', async => {
-    bot.user.setActivity("%help", {type : "WATCHING"})
+    bot.user.setActivity("Ending service soon. Read About Me.", {type : "WATCHING"})
         .then(console.log(`${bot.user.username} est en ligne`))
         .catch(console.error());
 });
