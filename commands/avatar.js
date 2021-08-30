@@ -5,7 +5,7 @@ module.exports = {
   aliases: ['icon', 'pfp', 'pp'],
   description: 'Returns your avatar or the user you mentionned\'s one.',
   
-  async execute(message, args) {
+  async execute(bot, message, args) {
     let member = message.mentions.users.first();
     if(!member) member = message.author;
     let avatar = member.displayAvatarURL({size: 1024});
