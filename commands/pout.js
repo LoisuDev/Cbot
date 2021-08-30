@@ -6,7 +6,7 @@ module.exports = {
   name: 'pout',
   aliases: ['bouder'],
     
-  async execute(message, args) {
+  async execute(bot, message, args) {
     let member = message.mentions.members.first();
     let { body } = await superagent.get(`https://shiro.gg/api/images/pout`);
     if(!member) return message.channel.send(body.url);
