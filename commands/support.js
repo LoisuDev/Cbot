@@ -1,12 +1,13 @@
 const Discord = require('discord.js');
 
+
 module.exports = {
   name: 'support',
   description: 'Pings the staff for help. ATTENTION This only works on Loisu Tea Time server!',
   usage: '%support <reason>',
   
-  async execute (bot, message, args) {
-    let staffchannel = bot.channels.find(channel => channel.id === '860998679560978483');
+  async execute (message, args) {
+    let staffchannel = client.channels.cache.find(channel => channel.id === '860998679560978483');
  
     /* If the message is not sent in Loisu Tea Time, it will return this */
     if(!message.guild.id === "859968423793786930") return message.channel.send('You can\'t do that. ERR 03 - Wrong server.')
