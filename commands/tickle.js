@@ -5,7 +5,7 @@ module.exports = {
   name: 'tickle',
   aliases: ['chatouiller'],
   
-  async execute(message, args) {
+  async execute(bot, message, args) {
     let member = message.mentions.users.first();
     let { body } = await superagent.get(`https://shiro.gg/api/images/tickle`);
     if(message.author.id === "573426170289455154") return message.channel.send('https://media1.tenor.com/images/3fc942141e181ef927813f0a5a679193/tenor.gif');
