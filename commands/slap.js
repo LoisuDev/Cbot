@@ -6,7 +6,7 @@ module.exports = {
   aliases: ['taper'],
   description: 'Meanie!',
   
-  async execute(message, args) {
+  async execute(bot, message, args) {
     let member = message.mentions.members.first();
     let { body } = await superagent.get(`https://shiro.gg/api/images/slap`);
     if(!member) return message.channel.send(body.url);
