@@ -5,7 +5,7 @@ module.exports = {
   aliases: ['8b'],
   description: "Ask me a question, and I will answer by yes, no, or maybe.",
   usage: '%8ball <question>',
-  execute(message, args) {
+  execute(bot, message, args) {
         if (!args[1]) return message.reply("Please ask a question !")
 
     let replies = ["Yes.", "No.", "Maybe."];
