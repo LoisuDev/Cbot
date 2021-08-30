@@ -5,7 +5,7 @@ module.exports = {
   name: 'shrug',
   
   
-  async execute(message, args) {
+  async execute(bot, message, args) {
     let member = message.mentions.members.first();
     let { body } = await superagent.get(`https://api.miki.bot/images/random?tags=shrug`);
     if(!member) return message.channel.send(body.url);
