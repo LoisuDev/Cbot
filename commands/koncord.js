@@ -6,7 +6,7 @@ module.exports = {
   description: 'The K-On Discord',
   usage: '%koncord',
   
-  async execute(message, args) {
+  async execute(bot, message, args) {
     let button = new disbut.MessageButton()
       .setStyle('url')
       .setLabel('K-On! Discord Server')
