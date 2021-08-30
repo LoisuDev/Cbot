@@ -6,7 +6,7 @@ module.exports = {
   description: 'Returns a punch gif',
   usage: '%punch [@user]',
   
-  async execute (message, args) {
+  async execute (bot, message, args) {
     let member = message.mentions.users.first();
     let { body } = await superagent.get(`https://api.miki.bot/images/random?tags=punch`);
     
