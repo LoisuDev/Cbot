@@ -10,7 +10,7 @@ module.exports = {
     let staffchannel = bot.channels.cache.find(channel => channel.id === '860998679560978483');
  
     /* If the message is not sent in Loisu Tea Time, it will return this */
-    if(!message.channel.id === "860693183149899826") return message.channel.send('You can\'t do that. ERR 03 - Wrong server.')
+    if(!message.channel.id === '860693183149899826') return message.channel.send('You can\'t do that. ERR 03 - Wrong server.')
     
     /* Let's get the message of the user */
     let reason = args.join(" ");
