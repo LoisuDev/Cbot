@@ -8,7 +8,7 @@ module.exports = {
   async execute (bot, message, args) {
     let embed = new Discord.MessageEmbed()
       .setColor('e410d3')
-      .setTitle('Sotoka - Informations')
+      .setTitle('Anko - Informations')
       .setDescription('Here are a couple informations about the bot.')
       .addField('Owner', 'Loisu#1111')
       .addField('Created at', bot.user.createdAt)
