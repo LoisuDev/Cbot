@@ -13,7 +13,7 @@ module.exports = {
     let embed = new Discord.MessageEmbed()
       .setColor('e410d3')
       .setTitle('Meow!')
-      .setImage(body.url)
+      .setImage(`https://cdn2.thecatapi.com/images/${body.id}`)
       .setFooter('cat')
       .setTimestamp()
     return message.channel.send(embed);
