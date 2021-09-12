@@ -8,6 +8,8 @@ module.exports = {
   usage: "%cat",
   
   async execute (bot, message, args) {
+    
+    return message.channel.send('This command is currently unavailable. Please try later.')
     let [{ body }] = await superagent.get(`https://api.thecatapi.com/v1/images/search`)
     
     let embed = new Discord.MessageEmbed()
