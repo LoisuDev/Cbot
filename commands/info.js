@@ -3,10 +3,23 @@ const disbut = require('discord-buttons');
 
 module.exports = {
   name: 'info',
-  description: 'Gives informations about the bot.',
-  usage: '%info',
-  
+  description: 'Returns informations about the bot.',
+
   async execute (bot, message, args) {
-    return message.channel.send('That command is a WIP. Please try again later!');
+    let embed = new Discord.MessageEmbed()
+      .setColor('e410d3')
+      .setTitle('Sotoka - Informations')
+      .setDescription('Here are a couple informations about the bot.')
+      .addField('Owner', 'Loisu#1111')
+      .addField('Created at', bot.user.createdAt)
+      .addField('Commands', '32')
+      .setFooter('info')
+      .setTimestamp()
+    let button = new disbut.MessageButton()
+      .setStyle('url')
+      .setLabel('Gihub Repository')
+      .setURL('https://github.com/azusa-neko/Cbot')
+    await message.channel.send(embed);
+    message.channel.send('Don\'t forget to check our Github page!', button)
   }
 }
