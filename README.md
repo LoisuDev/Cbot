@@ -1,6 +1,6 @@
-# Sotoka
+# Anko
 
-Basically called CBot on Github because of the previous name, Sotoka is a simple Javascript bot.
+Basically called CBot on Github because of the previous name, Anko is a simple Javascript bot.
 
 ## Installation and running (Windows)
 
@@ -56,11 +56,11 @@ Go to your command prompt, verify that you're in the bot folder, and then run th
 
 And it should be good. If the bot is on, the console will return 
 ```shell
-Sotoka est en ligne.
+Anko est en ligne.
 ```
-Which means "Sotoka is online" in French.
+Which means "Anko is online" in French.
 
-If you have any issues, please come in my Discord Server, SotokaCord: https://dsc.gg/sotokacord
+If you have any issues, please come in my Discord Server, Loisu Tea Time: https://dsc.gg/loisu
 
 ### Enjoy!
 
