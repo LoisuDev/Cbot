@@ -21,6 +21,14 @@ module.exports = {
                    "https://imageresizer.static9.net.au/dnFrrpI0D3yjeLbLSDW5Ha1H7Eo=/600x338/smart/https%3A%2F%2Fprod.static9.net.au%2F_%2Fmedia%2FImages%2FKitchen%2F2011%2F09%2F22%2F11%2F34%2Fchickensoup.jpg"
                   ];
     let res = Math.floor((Math.random() * replies.length));
+    
+    let embed = new Discord.MessageEmbed()
+        .setColor('e410d3')
+        .setTitle('Here\'s some soup!')
+        .setImage(replies[res])
+        .setFooter('soup')
+        .setTimestamp()
+    return message.channel.send(embed);
     message.channel.send(replies[res])
     }
   }  
