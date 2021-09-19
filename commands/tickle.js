@@ -21,12 +21,12 @@ module.exports = {
       .setFooter('tickle')
       .setTimestamp()
     
-    if(member.id === "655605141046820884") {
-      if(!message.author.id === "271984513289027587") return message.channel.send("Sorry, for some reason you can\'t do that...")
+    if(member.id == "655605141046820884") {
+      if(message.author.id !== "271984513289027587") return message.channel.send("Sorry, for some reason you can\'t do that...")
       return message.channel.send(hug_embed);
       }
-      if(member.id === "271984513289027587") {
-        if(!message.author.id === "655605141046820884") return message.channel.send('How dare you to tickle Nari?!')
+      if(member.id == "271984513289027587") {
+        if(message.author.id !== "655605141046820884") return message.channel.send('How dare you to tickle Nari?!')
         return message.channel.send(hug_embed);
       }
     message.channel.send(hug_embed);
